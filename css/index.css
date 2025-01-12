@@ -1,10 +1,10 @@
 :root {
-  --oscuro: #07070a;
-  --azulOscuro: #0a1128;
-  --azulClaro: #006fe6;
+  --naranja: #fe7265;
+  --morado: #7a2fe1;
+  /* --azulClaro: #006fe6; */
   --blanco: #fefcfb;
-  --titulos: "Baloo 2", cursive;
-  --parrafos: "Montserrat", sans-serif;
+  /* --titulos: "Baloo 2", cursive; */
+  /* --parrafos: "Montserrat", sans-serif; */
 }
 
 html {
@@ -14,6 +14,7 @@ html {
 }
 body {
   font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 *,
@@ -23,16 +24,6 @@ body {
 }
 
 /*Estilos globales*/
-h1,
-h2,
-h3 {
-  font-family: var(--titulos);
-}
-
-p,
-a {
-  font-family: var(--parrafos);
-}
 
 .ocultar {
   display: none;
@@ -47,7 +38,6 @@ a {
 .btn {
   padding: 1rem 4rem;
   font-weight: bold;
-  font-family: var(--parrafos);
   font-size: 2rem;
   border: none;
   color: var(--blanco);
@@ -119,12 +109,14 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
-.logo h2 {
-  font-size: 3rem;
+.logo-nav h2 {
+  font-size: 3.5rem;
+  color: var(--morado);
 }
 
-.logo h2 span {
-  color: var(--azulClaro);
+.logo-nav h2 span {
+  color: var(--morado);
+  font-size: 4rem;
 }
 .contenido-navegacion {
   display: flex;
@@ -160,10 +152,12 @@ a {
   color: var(--oscuro);
   text-decoration: none;
   transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
 }
 .navegacion a:hover {
-  background-color: var(--azulClaro);
+  background-color: var(--naranja);
   color: var(--blanco);
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
@@ -269,7 +263,7 @@ a {
 .servicios h2 {
   font-size: 5rem;
   text-align: center;
-  color: var(--azulClaro);
+  color: var(--naranja);
 }
 
 @media (min-width: 768px) {
@@ -285,10 +279,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
-.servicio i {
-  background-color: var(--azulClaro);
+.icon i {
+  background-color: var(--naranja);
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
@@ -299,6 +294,12 @@ a {
   font-size: 3rem;
   box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.45);
   transition: all 0.3s ease-in-out;
+}
+
+.icon i:hover{
+  border: 2px solid var(--naranja) ;
+  background-color: rgb(255, 255, 255);
+  color: var(--naranja);
 }
 
 .servicio h3 {
@@ -318,23 +319,25 @@ a {
      cursor: pointer; 
   } */
 
-  .servicio:hover i {
+  /* .servicio:hover i {
     background-color: var(--blanco);
     color: var(--azulClaro);
-  }
+  } */
 }
 
 /* Pie de pagina*/
 
 .footer {
-  background-color: var(--azulOscuro);
+  background-color: var(--morado);
+  color: #f1f1f1;
 }
 
-.footer .logo h2,
-.footer p {
+.logo-footer{
   color: var(--blanco);
   text-align: center;
+  font-size: 20px;
 }
+
 
 @media (min-width: 768px) {
   .footer {
