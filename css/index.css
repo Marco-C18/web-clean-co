@@ -6,15 +6,21 @@
   /* --titulos: "Baloo 2", cursive; */
   /* --parrafos: "Montserrat", sans-serif; */
 }
-
-html {
+*{
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  
+}
+html {
   font-size: 62.5%;
   /* scroll-behavior: smooth; */
 }
 body {
   font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
 }
 
 *,
@@ -24,6 +30,47 @@ body {
 }
 
 /*Estilos globales*/
+header{
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: var(--blanco);
+  
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--morado);
+}
+.navlist{
+  display: flex;
+}
+.navlist a{
+  color: black;
+  margin-left: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+.navlist a:hover{
+  border-bottom: 2px solid var(--morado);
+}
+#menu-icon{
+  color: white;
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+
+}
 
 .ocultar {
   display: none;
@@ -345,4 +392,33 @@ body {
     align-items: center;
     justify-content: space-around;
   }
+}
+@media (max-width: 990px){
+  #menu-icon{
+      display: block;
+      color: #000000;
+  }
+  .navlist{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 20px;
+    transition: all .55s ease;
+
+}
+.navlist a{
+    margin-left: 0;
+    display: block;
+    margin: 7px 0;
+    color: #000000;
+}
+.navlist.open{
+    right: 0;
+}
 }
