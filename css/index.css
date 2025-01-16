@@ -43,6 +43,7 @@ header{
   justify-content: space-between;
   padding: 33px 9%;
   background: var(--blanco);
+  height: 0px;
   
 }
 
@@ -299,6 +300,62 @@ header{
   outline: none;
 }
 
+.container-price{
+  width: 100%;
+  display: flex;
+  max-width: 1100px;
+  margin: auto;
+}
+.card{
+  width: 100%;
+ 
+  margin-left: 80px;
+  margin-top: 80px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  cursor: default;
+  transition: all 400ms ease;
+}
+
+.card:hover{
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+.card img{
+  width: 100%;
+  height: 260px;
+}
+.card .contenido{
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido h3{
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.card .contenido a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: var(--morado);
+  border: 1px solid var(--morado);
+  border-radius: 4px;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+.card .contenido a:hover{
+  background: var(--morado);
+  color: var(--blanco);
+}
+.contenido p{
+  color: #000000;
+  line-height: 1.5;
+
+}
+
 /*Seccion servicios*/
 .servicios {
   padding-top: 5rem;
@@ -321,6 +378,16 @@ header{
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
   }
+
+  
+}
+
+@media (max-width: 768px) {
+  
+  .container-price{
+    flex-wrap: wrap;
+  }
+  
 }
 
 .servicio {
