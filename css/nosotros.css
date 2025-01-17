@@ -1,0 +1,163 @@
+:root {
+    --oscuro: #07070a;
+    --azulOscuro: #0a1128;
+    --azulClaro: #006fe6;
+    --blanco: #fefcfb;
+    --titulos: "Baloo 2", cursive;
+    --parrafos: "Montserrat", sans-serif;
+    --grisClaro: #f4f4f4;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--parrafos);
+    background-color: var(--blanco);
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+.flecha-retroceder {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: var(--azulClaro);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+.flecha-retroceder:hover {
+    background-color: var(--azulOscuro);
+}
+
+
+.nosotros {
+    padding: 60px 20px;
+    background-color: var(--blanco);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo {
+    font-family: var(--titulos);
+    font-size: 2.8rem;
+    color: var(--azulOscuro);
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.texto-principal {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: justify;
+    color: var(--oscuro);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mision-vision {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.mision, .vision {
+    width: 48%;
+    background-color: var(--grisClaro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px var(--sombra);
+}
+
+.mision h2, .vision h2 {
+    font-size: 1.6rem;
+    color: var(--azulClaro);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.mision p, .vision p {
+    font-size: 1rem;
+    color: var(--oscuro);
+}
+
+.valores {
+    margin-top: 60px;
+}
+
+.valores h2 {
+    font-size: 1.8rem;
+    color: var(--azulClaro);
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.valores ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.valores li {
+    font-size: 1.2rem;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    background-color: var(--azulClaro);
+    color: var(--blanco);
+    border-radius: 25px;
+    box-shadow: 0 2px 5px var(--sombra);
+    transition: all 0.3s ease;
+}
+
+.valores li:hover {
+    background-color: var(--azulOscuro);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .mision-vision {
+        flex-direction: column;
+    }
+
+    .mision, .vision {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .titulo {
+        font-size: 2.2rem;
+    }
+
+    .texto-principal {
+        font-size: 1.1rem;
+    }
+
+    .valores ul {
+        flex-direction: column;
+    }
+
+    .valores li {
+        margin-bottom: 20px;
+    }
+}
