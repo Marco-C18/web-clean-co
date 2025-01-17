@@ -226,6 +226,34 @@ header{
   animation: desplazamiento 0.5s ease-in-out;
 }
 
+.atencion.flotante {
+  position: relative;
+}
+
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.boton-flotante:hover {
+  background-color: #128c7e;
+}
+
+.boton-flotante i {
+  font-size: 30px; /* Tamaño adecuado para el ícono */
+  color: white;
+}
+
 @media (min-width: 768px) {
   .ocultar {
     display: inline;
